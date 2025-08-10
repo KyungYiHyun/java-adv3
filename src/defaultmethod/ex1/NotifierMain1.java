@@ -1,0 +1,12 @@
+package defaultmethod.ex1;
+
+import java.util.List;
+
+public class NotifierMain1 {
+
+    public static void main(String[] args) {
+        List<Notifier> notifiers = List.of(new EmailNotifier(), new SMSNotifier(), new AppPushNotifier());
+        notifiers.forEach(n -> n.notify("환영"));
+
+    }
+}
